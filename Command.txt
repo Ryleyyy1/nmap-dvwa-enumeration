@@ -1,0 +1,11 @@
+# Port & Service Detection
+nmap -sS -sV -p 80 127.0.0.1 -oN results/service-version.txt
+
+# HTTP Methods Enumeration
+nmap -p 80 --script http-methods 127.0.0.1 -oN results/http-methods.txt
+
+# HTTP Header & Title
+nmap -p 80 --script http-title,http-server-header 127.0.0.1 -oN results/http-header-title.txt
+
+# Directory Enumeration
+nmap -p 80 --script http-enum 127.0.0.1 -oN results/http-enum.txt
