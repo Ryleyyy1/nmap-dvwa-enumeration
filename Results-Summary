@@ -1,0 +1,22 @@
+## Results Summary
+
+The Nmap-based web enumeration identified an active HTTP service running on
+port 80 with the following key findings:
+
+- **Open Service**
+  - Port 80/tcp is open and running **Apache HTTP Server 2.4.65 (Debian)**
+
+- **Server Information Disclosure**
+  - Web server version and operating system details are exposed via HTTP headers
+  - Default Apache page is accessible, indicating lack of server hardening
+
+- **Supported HTTP Methods**
+  - Allowed methods: **GET, POST, HEAD, OPTIONS**
+  - Methods such as POST may increase risk if input validation is not properly implemented
+
+- **Exposed Endpoint**
+  - The endpoint **`/server-status/`** was discovered during directory enumeration
+  - This endpoint may leak server activity and resource information if not access-restricted
+
+These findings indicate **information disclosure risks** and **insufficient web server hardening**,
+which may increase the attack surface for further exploitation.
