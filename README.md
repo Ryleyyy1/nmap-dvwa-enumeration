@@ -1,35 +1,46 @@
-# Nmap Web Server Enumeration using DVWA
+# Nmap Web Enumeration – DVWA Lab
 
-## 📌 Overview
-This project demonstrates web server enumeration using **Nmap and NSE scripts**
-against **DVWA (Damn Vulnerable Web Application)** in a controlled local lab
-environment.
+## Overview
+This repository documents a **web server enumeration assessment** conducted
+using **Nmap and Nmap Scripting Engine (NSE)** against **Damn Vulnerable Web
+Application (DVWA)** in a controlled and authorized lab environment.
 
-The goal is to identify exposed services, HTTP methods, server information,
-and potentially sensitive endpoints.
+The purpose of this project is to demonstrate reconnaissance techniques,
+enumeration methodology, and security analysis skills commonly used in
+web penetration testing.
 
 ---
 
-## 🛠️ Tools & Environment
+## Scope
+- Target: DVWA (127.0.0.1 – localhost)
+- Service: HTTP (Apache Web Server)
+- Environment: Private laboratory setup only
+
+---
+
+## Tools & Technologies
 - Nmap 7.95
 - Kali Linux
-- Apache Web Server
-- DVWA (Localhost)
-- Target: 127.0.0.1
+- Apache HTTP Server
+- DVWA
 
 ---
 
-## ⚙️ Enumeration Techniques
-- Port & service detection
-- HTTP methods enumeration
-- HTTP header and title discovery
-- Directory enumeration using NSE
+## Methodology
+1. Port and service discovery
+2. HTTP methods enumeration
+3. Server information disclosure analysis
+4. Directory enumeration using NSE scripts
+5. Risk identification and security recommendations
 
 ---
 
-## 🧪 Commands Used
-All commands are documented in `commands.txt`
+## Results & Analysis
+- Raw scan outputs are stored in the `results/` directory
+- Technical findings and security impact are documented in `analysis.md`
 
-Example:
-```bash
-nmap -sS -sV -p 80 127.0.0.1
+---
+
+## Legal Disclaimer
+This project was performed **strictly in a legal and controlled lab environment**.
+Any attempt to scan systems without explicit authorization is illegal and unethical.
